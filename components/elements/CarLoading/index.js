@@ -1,16 +1,19 @@
 import React, { Component, PropTypes } from "react"
+import { Dimensions } from "react-native"
 import styled from "styled-components/native"
 import { DangerZone } from "expo"
 const { Lottie } = DangerZone
 import LottieSource from "./lottie.json"
 
 const CarLoadingContainer = styled.View`
-    
+  padding-horizontal: 8
 `
+
+const { width } = Dimensions.get("window")
 
 export default class CarLoading extends Component {
   static propTypes = {}
-  componentWillMount() {
+  componentDidMount() {
     this.animation.reset()
     this.animation.play()
   }
@@ -23,9 +26,9 @@ export default class CarLoading extends Component {
             this.animation = animation
           }}
           style={{
-            width: 400,
-            height: 400,
-            backgroundColor: "#eee"
+            width: width - 16,
+            height: 180,
+            backgroundColor: "#fafbfb"
           }}
           source={LottieSource}
         />

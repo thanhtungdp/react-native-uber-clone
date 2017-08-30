@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from "react"
 import Screen from "../../components/layouts/Screen"
 import { getPriceText } from "../../utils"
 import { Clearfix, IconWithLabel, NavbarBack } from "../../components/elements"
+import CarLoading from "../../components/elements/CarLoading"
 import styled from "styled-components/native"
 import Color from "../../themes/colors"
 
@@ -49,6 +50,8 @@ export default class BookScreen extends Component {
             {getPriceText(direction.distance)}
           </IconWithLabel>
         </BoxWhite>
+        <Clearfix height={16}/>
+        <CarLoading />
       </Screen>
     )
   }
