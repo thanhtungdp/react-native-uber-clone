@@ -7,9 +7,6 @@ import { StyleSheet, Text, View } from "react-native"
 
 import LaunchScreen from "./screens/LaunchScreen"
 import BookScreen from "./screens/BookScreen"
-import Login from "./screens/Login"
-import Register from "./screens/Register"
-import Dashboard from "./screens/Dashboard"
 
 const AppNavigation = new StackNavigator(
   {

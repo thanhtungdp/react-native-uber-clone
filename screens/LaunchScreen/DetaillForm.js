@@ -35,16 +35,7 @@ export default class FormDetail extends React.Component {
     const { direction } = this.props
     return (
       <FormDetailContainer>
-        <WhiteBox>
-          <Text color={Color.textDescription}>
-            {direction.distance.text}
-          </Text>
-          <Text color={Color.primary}>
-            {getPriceText(this.props.direction.distance)}
-          </Text>
-        </WhiteBox>
-        <Clearfix height={8} />
-        <Button onPress={this.props.onBookPress}>Đặt xe</Button>
+
       </FormDetailContainer>
     )
   }

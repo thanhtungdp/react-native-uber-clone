@@ -38,43 +38,17 @@ export default class SearchForm extends Component {
   }
 
   handleChangeInput(key, value) {
-    this.setState({
-      [key]: value
-    })
+
   }
 
   handleSubmit(e) {
-    if (e.nativeEvent.key === "Enter") {
-      this.props.onSubmit({
-        origin: this.state.origin,
-        destination: this.state.destination
-      })
-    }
+
   }
 
   render() {
     return (
       <SearchFormContainer>
-        <InputInline
-          label={<SimpleLineIcons name="home" />}
-          labelWidth={30}
-          placeholder="Nhập điểm đón"
-          value={this.state.origin}
-          onChangeText={this.handleChangeInput.bind(this, "origin")}
-        />
-        <InputInline
-          label={<SimpleLineIcons name="location-pin" />}
-          labelWidth={30}
-          placeholder="Nhập điểm đến"
-          value={this.state.destination}
-          returnKeyType="go"
-          onChangeText={this.handleChangeInput.bind(this, "destination")}
-          onKeyPress={this.handleSubmit.bind(this)}
-        />
-        {this.props.isLoading &&
-          <LoadingOverlay>
-            <ActivityIndicator />
-          </LoadingOverlay>}
+
       </SearchFormContainer>
     )
   }

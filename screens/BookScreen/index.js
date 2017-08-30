@@ -24,34 +24,6 @@ export default class BookScreen extends Component {
           title="Đặt xe"
           onBack={() => this.props.navigation.goBack(null)}
         />
-        <BoxWhite>
-          <IconWithLabel iconColor={Color.green} icon="home">
-            {direction.origin.text}
-          </IconWithLabel>
-          <Clearfix height={16} />
-          <IconWithLabel iconColor={Color.orange} icon="location-pin">
-            {direction.destination.text}
-          </IconWithLabel>
-          <Clearfix height={16} />
-          <IconWithLabel
-            iconColor={Color.yellow}
-            color={Color.textDescription}
-            icon="direction"
-          >
-            {direction.distance.text}
-          </IconWithLabel>
-          <Clearfix height={16} />
-          <IconWithLabel
-            iconColor={Color.primary}
-            color={Color.primary}
-            icon="wallet"
-            fontSize={20}
-          >
-            {getPriceText(direction.distance)}
-          </IconWithLabel>
-        </BoxWhite>
-        <Clearfix height={16}/>
-        <CarLoading />
       </Screen>
     )
   }
