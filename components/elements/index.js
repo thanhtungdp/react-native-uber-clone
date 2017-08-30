@@ -7,6 +7,9 @@ import LogoStyled from "./LogoStyled";
 import NavbarBack from "./NavbarBack";
 import Navbar from "./Navbar";
 import SettingItem from "./SettingItem";
+import Text from "./Text"
+import IconWithLabel from "./IconWithLabel"
+import CarLoading from "./CarLoading"
 
 export {
 	Button,
@@ -17,7 +20,10 @@ export {
 	LogoDefault,
 	NavbarBack,
 	Navbar,
-	SettingItem
+	SettingItem,
+	Text,
+	IconWithLabel,
+	CarLoading
 }
 
 export default {
@@ -29,5 +35,8 @@ export default {
 	LogoDefault,
 	NavbarBack,
 	Navbar,
-	SettingItem
+	SettingItem,
+	Text,
+	IconWithLabel,
+	CarLoading
 }

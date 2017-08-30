@@ -13,7 +13,7 @@ const InputInlineWrapper = styled.View`
 `;
 
 const LabelWrapper = styled.View`
-  width: 100;
+  width: ${props => props.width ? props.width : 100};
 `;
 
 const Label = styled.Text`
@@ -28,7 +28,7 @@ const Input = styled.TextInput`
 export default function InputInline(props) {
   return (
     <InputInlineWrapper first={props.first}>
-      <LabelWrapper>
+      <LabelWrapper width={props.labelWidth}>
         <Label>{props.label}</Label>
       </LabelWrapper>
       <Input placeholder={props.placeholder} {...props} />
@@ -37,6 +37,7 @@ export default function InputInline(props) {
 }
 InputInline.propTypes = {
   first: PropTypes.bool,
-  label: PropTypes.string,
+  label: PropTypes.any,
+  labelWidth: PropTypes.number,
   placeholder: PropTypes.string
 };

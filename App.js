@@ -1,30 +1,28 @@
-import React from "react";
-import { StackNavigator } from "react-navigation";
-import { StyleSheet, Text, View } from "react-native";
+console.disableYellowBox = true;
 
-import LaunchScreen from "./screens/LaunchScreen";
-import Login from "./screens/Login";
-import Register from "./screens/Register";
-import Dashboard from "./screens/Dashboard";
+import React from "react"
+import { StackNavigator } from "react-navigation"
+import { StyleSheet, Text, View } from "react-native"
+
+
+import LaunchScreen from "./screens/LaunchScreen"
+import BookScreen from "./screens/BookScreen"
+import Login from "./screens/Login"
+import Register from "./screens/Register"
+import Dashboard from "./screens/Dashboard"
 
 const AppNavigation = new StackNavigator(
   {
     LaunchScreen: {
       screen: LaunchScreen
     },
-    Login: {
-      screen: Login
-    },
-    Register: {
-      screen: Register
-    },
-	  Dashboard: {
-		  screen: Dashboard
-	  },
+    BookScreen: {
+      screen: BookScreen
+    }
   },
   {
     headerMode: "none"
   }
-);
+)
 
-export default AppNavigation;
+export default AppNavigation
